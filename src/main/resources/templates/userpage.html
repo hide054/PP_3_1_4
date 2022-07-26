@@ -45,7 +45,7 @@
                     <tr>
                         <th scope="col">ID</th>
                         <th scope="col">First Name</th>
-                        <th scope="col">Last Name</th>
+                        <th scope="col">Age</th>
                         <th scope="col">Phone Number</th>
                         <th scope="col">Email</th>
                         <th scope="col">Role</th>
@@ -56,7 +56,7 @@
                         <td th:text="${user.id}">ID</td>
                         <td th:text="${user.username}">NAME</td>
                         <td th:text="${user.lastName}">LAST_NAME</td>
-                        <td th:text="${user.phoneNumber}">PHONE_NUMBER</td>
+                        <td th:text="${user.age}">AGE</td>
                         <td th:text="${user.email}">EMAIL</td>
                         <td th:text="${user.roles.toString.replace('ROLE_','').replace('[', '').replace(']', '')}">ROLE</td>
                     </tr>

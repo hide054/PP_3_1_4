@@ -20,4 +20,6 @@ public interface UserService {
     User getUserByEmail(String email);
 
     boolean existsUserById(long id);
+
+    void saveUser(User newUser);
 }

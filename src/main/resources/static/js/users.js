@@ -28,7 +28,7 @@ function createRows(user) {
     user_data += '<td>' + user.id + '</td>';
     user_data += '<td>' + user.username + '</td>';
     user_data += '<td>' + user.lastName + '</td>';
-    user_data += '<td>' + user.phoneNumber + '</td>';
+    user_data += '<td>' + user.age + '</td>';
     user_data += '<td>' + user.email + '</td>';
     user_data += '<td>';
     let roles = user.authorities;
@@ -69,7 +69,7 @@ $(document).on('click', '.edit-btn', function () {
             $('#editId').val(user.id);
             $('#editName').val(user.username);
             $('#editLastName').val(user.lastName);
-            $('#editPhoneNumber').val(user.phoneNumber);
+            $('#editAge').val(user.age);
             $('#editEmail').val(user.email);
             $('#editPassword').val(user.password);
             $('#editRole').empty();
@@ -92,7 +92,7 @@ $('#editButton').on('click', (e) => {
         id: $("input[name='id']").val(),
         username: $("input[name='username']").val(),
         lastName: $("input[name='lastName']").val(),
-        phoneNumber: $("input[name='phoneNumber']").val(),
+        age: $("input[name='age']").val(),
         email: $("input[name='email']").val(),
         password: $("input[name='password']").val(),
         roles: getUserRolesForEdit()
@@ -131,7 +131,7 @@ $(document).on('click', '.del-btn', function () {
             $('#delId').empty().val(user.id);
             $('#delName').empty().val(user.username);
             $('#delLastName').empty().val(user.lastName);
-            $('#delPhoneNumber').empty().val(user.phoneNumber);
+            $('#delAge').empty().val(user.age);
             $('#delEmail').empty().val(user.email);
             $('#delPassword').empty().val(user.password);
             $('#delRole').empty();
@@ -178,7 +178,7 @@ $('.newUser').on('click', () => {
 
     $('#name').empty().val('')
     $('#lastName').empty().val('')
-    $('#phoneNumber').empty().val('')
+    $('#age').empty().val('')
     $('#email').empty().val('')
     $('#password').empty().val('')
     $('#addRole').empty().val('')
@@ -193,7 +193,7 @@ $("#addNewUserButton").on('click', () => {
     let newUser = {
         username: $('#name').val(),
         lastName: $('#lastName').val(),
-        phoneNumber: $('#phoneNumber').val(),
+        age: $('#age').val(),
         email: $('#email').val(),
         password: $('#password').val(),
         roles: getUserRolesForAdd()
