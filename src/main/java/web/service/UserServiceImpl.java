@@ -2,7 +2,7 @@ package web.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import web.dao.UserRepository;
+import web.repository.UserRepository;
 import web.model.User;
 import java.util.List;
 

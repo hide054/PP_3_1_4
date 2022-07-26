@@ -2,7 +2,7 @@ package web.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import web.dao.RoleRepository;
+import web.repository.RoleRepository;
 import web.model.Role;
 
 import java.util.List;

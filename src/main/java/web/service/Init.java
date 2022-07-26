@@ -2,15 +2,13 @@ package web.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import web.dao.RoleRepository;
-import web.dao.UserRepository;
+import web.repository.RoleRepository;
+import web.repository.UserRepository;
 import web.model.Role;
 import web.model.User;
 
 import javax.annotation.PostConstruct;
-import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 @Component
