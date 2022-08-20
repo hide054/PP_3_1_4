@@ -37,6 +37,13 @@ public class UserController {
     public String userInfo(@AuthenticationPrincipal User user, Model model) {
         model.addAttribute("user", user);
         model.addAttribute("roles", user.getRoles());
+        return "userwithoutadminpage";
+    }
+
+    @GetMapping(value = "admin/info")
+    public String userInf(@AuthenticationPrincipal User user, Model model) {
+        model.addAttribute("user", user);
+        model.addAttribute("roles", user.getRoles());
         return "userpage";
     }
 

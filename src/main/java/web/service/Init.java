@@ -33,14 +33,20 @@ public class Init {
         roleRepository.save(roleUser);
         roleRepository.save(roleAdmin);
 
-
         userRoles.add(roleUser);
         adminRoles.add(roleAdmin);
         adminRoles.add(roleUser);
 
-        User user = new User("User", "Userov", 18,  "user@mail.ru", "$2a$12$I2Jaja1tiG0OLLA8G9SrOO225e93KICb9qknGyO8Lgs5/CIMbxWV6", userRoles); //1234
-        User admin = new User("Admin", "Adminov", 25,  "admin@mail.ru", "$2a$12$T69GNWh63fXfM7RuAcBZm.ZrZo9HjEJkf0cwpg8LWAc8XEM16Lg2e", adminRoles); //4321
-
+        User user = new User("User",
+                "User", 21,
+                "user@mail.ru",
+                "$2a$12$6M74xs41D4LxfEILkM2KBe8l4L3R.2xco5aO2E08lZUDPwz8X1nVS",
+                userRoles);
+        User admin = new User("Admin",
+                "Admin", 35,
+                "admin@mail.ru",
+                "$2a$12$F528qWb9/2oWvUN50tXTQOlTHYVQkhByfFzWmfk4EFKOTqHQdwWIy",
+                adminRoles);
 
         userRepository.save(user);
         userRepository.save(admin);
